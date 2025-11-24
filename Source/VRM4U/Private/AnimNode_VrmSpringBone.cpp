@@ -388,8 +388,8 @@ void FAnimNode_VrmSpringBone::ConditionalDebugDraw(FPrimitiveDrawInterface* PDI,
 		TArray<SData> dataList;
 		TArray<int32> boneList;
 
-		for (const auto spr : MetaObjectLocal->VRMSpringMeta) {
-			for (const auto boneName : spr.boneNames) {
+		for (const auto &spr : MetaObjectLocal->VRMSpringMeta) {
+			for (const auto &boneName : spr.boneNames) {
 				int32_t boneIndex = PreviewSkelMeshComp->GetBoneIndex(*boneName);
 				boneList.AddUnique(boneIndex);
 
