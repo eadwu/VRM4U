@@ -70,7 +70,7 @@
 
 #if UE_VERSION_OLDER_THAN(5,4,0)
 #else
-#include "MIsc/FieldAccessor.h"
+#include "Misc/FieldAccessor.h"
 #endif
 
 #if PLATFORM_WINDOWS
@@ -494,7 +494,7 @@ bool ULoaderBPFunctionLibrary::IsValidVRM4UFile(FString filepath) {
 
 	const FString ext = FPaths::GetExtension(filepath);
 	if (ext.Compare(TEXT("vrm"), ESearchCase::IgnoreCase) && ext.Compare(TEXT("vrma"), ESearchCase::IgnoreCase)) {
-		// vrm, vrmaˆÈŠO‚Í‘f’Ê‚µ
+		// vrm, vrmaï¿½ÈŠOï¿½Í‘fï¿½Ê‚ï¿½
 		return true;
 	}
 
@@ -836,7 +836,7 @@ bool ULoaderBPFunctionLibrary::LoadVRMFileFromMemory(const UVrmAssetListObject *
 			return false;
 		}
 		{
-			// Œãˆ—BUE5.7‚Å‚ÍCreateMeshDescription ‚ðŒÄ‚Ô‚½‚ß•K—v
+			// ï¿½ãˆï¿½ï¿½ï¿½BUE5.7ï¿½Å‚ï¿½CreateMeshDescription ï¿½ï¿½ï¿½Ä‚Ô‚ï¿½ï¿½ß•Kï¿½v
 			if (out->SkeletalMesh) {
 				out->SkeletalMesh->PostLoad();
 			}
